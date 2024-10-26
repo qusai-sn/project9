@@ -1,0 +1,15 @@
+<div class="animal-grid">
+  <div class="animal-card" *ngFor="let item of dataArray">
+    <img [src]="item.photoUrl || '/assets/placeholder-pet.jpg'" alt="{{item.name}}" class="card-img-top">
+    <div class="card-body">
+      <h3 class="card-title">{{item.name}}</h3>
+      <div class="animal-info">
+        <p><strong>Species:</strong> {{item.species}}</p>
+        <p><strong>Age:</strong> {{item.age}}</p>
+        <p><strong>Size:</strong> {{item.size}}</p>
+      </div>
+      <p class="card-text">{{item.description | slice:0:100}}...</p>
+      <button class="btn btn-primary" [routerLink]="['/getbyId', item.animalId]">View Details</button>
+    </div>
+  </div>
+</div>

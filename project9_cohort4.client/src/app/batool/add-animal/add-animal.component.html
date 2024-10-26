@@ -1,0 +1,61 @@
+<form class="animal-form" (ngSubmit)="addAnimal(animalForm.value)" #animalForm="ngForm">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="name" ngModel required>
+  </div>
+
+  <div class="form-group">
+    <label for="species">Species</label>
+    <input type="text" class="form-control" id="species" name="species" ngModel required>
+  </div>
+
+  <div class="form-group">
+    <label for="breed">Breed</label>
+    <input type="text" class="form-control" id="breed" name="breed" ngModel required>
+  </div>
+
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input type="number" class="form-control" id="age" name="age" ngModel required>
+  </div>
+
+  <div class="form-group">
+    <label for="size">Size</label>
+    <select class="form-control" id="size" name="size" ngModel required>
+      <option value="Small">Small</option>
+      <option value="Medium">Medium</option>
+      <option value="Large">Large</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="temperament">Temperament</label>
+    <input type="text" class="form-control" id="temperament" name="temperament" ngModel required>
+  </div>
+
+  <div class="form-group">
+    <label for="specialNeeds">Special Needs</label>
+    <textarea class="form-control" id="specialNeeds" name="specialNeeds" ngModel rows="3"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea class="form-control" id="description" name="description" ngModel required rows="3"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="adoptionStatus">Adoption Status</label>
+    <select class="form-control" id="adoptionStatus" name="adoptionStatus" ngModel required>
+      <option value="Available">Available</option>
+      <option value="Pending">Pending</option>
+      <option value="Adopted">Adopted</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="photoUrl">Photo URL</label>
+    <input type="text" class="form-control" id="photoUrl" name="photoUrl" ngModel>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="!animalForm.valid">Add Animal</button>
+</form>

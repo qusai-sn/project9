@@ -1,0 +1,147 @@
+/* You can add global styles to this file, and also import other style files */
+/* Shared Card Styles */
+.animal-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  margin: 1rem;
+  overflow: hidden;
+  background: white;
+}
+
+  .animal-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .animal-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .animal-card .card-body {
+    padding: 1.5rem;
+  }
+
+  .animal-card .card-title {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+/* Form Styles */
+.animal-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-control {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.75rem;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+
+  .form-control:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+  }
+
+.btn-primary {
+  background: #4CAF50;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+  .btn-primary:hover {
+    background: #388E3C;
+  }
+
+/* Grid Layout for Cards */
+.animal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Detail View Styles */
+.animal-detail {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.detail-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.detail-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.detail-info {
+  flex: 1;
+}
+
+/* Action Buttons */
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-danger {
+  background: #dc3545;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+  .btn-danger:hover {
+    background: #c82333;
+  }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .animal-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .detail-header {
+    flex-direction: column;
+  }
+
+  .detail-image {
+    width: 100%;
+    height: 250px;
+  }
+}
